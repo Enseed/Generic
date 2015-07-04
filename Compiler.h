@@ -97,7 +97,7 @@
 //#pragma warning (default: 4946) // reinterpret_cast used between related classes: 'class1' and 'class2'
 
 
-#define snprintf _snprintf
+//#define snprintf _snprintf
 #define stricmp _stricmp
 #define strcasecmp stricmp
 #define strncasecmp _strnicmp
