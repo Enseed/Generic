@@ -33,8 +33,8 @@
 //==============================================================================
 //	EXTERNAL DECLARATIONS
 //==============================================================================
-#include <Generic/Async/Atomic.h>
-#include <Generic/Devel/Debug.h>
+#include <atomic>
+#include "../Devel/Debug.h"
 
 namespace seed {
 
@@ -134,9 +134,9 @@ struct CountPtrRefStruct
 		// to 1 from 0, then the object is deleted.  If the previous value was 1, then
 		// we're safe.
 
-		if (seed::Atomic::increment(&_refCount) <= 1)
+		if (_refCount.fetch_add(1) <= 1)
 		{
-			seed::Atomic::decrement(&_refCount);
+			_refCount.fetch_sub(1);
 			softRelease();
 			return false;
 		}
@@ -145,12 +145,12 @@ struct CountPtrRefStruct
 
 	void softRetain()
 	{
-		seed::Atomic::increment(&_structRefCount);
+		_structRefCount.fetch_add(1);
 	}
 
 	bool release()
 	{
-		if (seed::Atomic::decrement(&_refCount) == 0)
+		if (_refCount.fetch_sub(1) == 0)
 		{
 			if (_hasOwnership)
 				ALLOCATOR::free(_ptr);
@@ -162,7 +162,7 @@ struct CountPtrRefStruct
 
 	bool softRelease()
 	{
-		if (seed::Atomic::decrement(&_structRefCount) == 0)
+		if (_structRefCount.fetch_sub(1) == 0)
 		{
 			ASSERT(_refCount == 0);
 			delete this;
@@ -171,8 +171,8 @@ struct CountPtrRefStruct
 		return false;
 	}
 
-	volatile sint32 _refCount;
-	volatile sint32 _structRefCount;
+	volatile std::atomic_int_fast32_t _refCount;
+	volatile std::atomic_int_fast32_t _structRefCount;
 	T *_ptr;
 	bool _hasOwnership;
 };
@@ -274,10 +274,15 @@ public:
 	template <class LhsT>
 	LhsT* staticCast();
 
+	template <typename LhsT, typename LhsTALLOCATOR>
+	operator CountPtr<LhsT, LhsTALLOCATOR>();
+
 	CountPtrParam setFromParam()
 	{
 		return CountPtrParam(this);
 	}
+
+	template<typename, typename> friend class CountPtr;
 
 private:
 	CountPtrRefStruct<T, ALLOCATOR> *_refStruct;

@@ -213,6 +213,25 @@ LhsT* CountPtr<T, ALLOCATOR>::staticCast()
 	return static_cast<LhsT*>(_refStruct->_ptr);
 }
 
+template<class T, class ALLOCATOR>
+template < class LhsT, class LhsTALLOCATOR>
+CountPtr<T, ALLOCATOR>::operator CountPtr<LhsT, LhsTALLOCATOR>()
+{
+	static_assert(std::is_base_of<LhsT, T>::value,
+		"LhsT must be a descendant of T"
+		);
+
+	CountPtr<LhsT> lhs;
+
+	lhs._refStruct = reinterpret_cast<sd::CountPtrRefStruct<LhsT, LhsTALLOCATOR>*>(_refStruct);
+
+	if (lhs._refStruct)
+		_refStruct->retain();
+
+	return lhs;
+}
+
+
 
 
 
@@ -370,7 +389,6 @@ bool operator != (const T *lhs, const CountPtr<U, ALLOCATOR> &rhs)
 {
 	return rhs != lhs;
 }
-
 
 
 
