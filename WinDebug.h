@@ -29,7 +29,7 @@
 #include "../Base/Base.h"
 
 #ifdef __cplusplus
-#include <Generic/Base/TString.h>
+#include <Enseed/Generic/Base/TString.h>
 
 #ifdef TARGET_DEBUG
 #define CHECK_GLE(_fname) do {CheckGLE(#_fname, __FILE__, __LINE__);}while (0);
