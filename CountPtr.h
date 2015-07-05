@@ -33,10 +33,11 @@
 //==============================================================================
 //	EXTERNAL DECLARATIONS
 //==============================================================================
-#include <atomic>
-#include "../Devel/Debug.h"
+#include <Enseed/Generic/Base/Base.h>
+#include <Enseed/Generic/Atomic/Atomic.h>
+#include <Enseed/Generic/Devel/Debug.h>
 
-namespace seed {
+BEGIN_GENERIC_NAMESPACE
 
 /*!
  *	Reference counted pointer class.  Use an CountPtr to make sure the pointer is being
@@ -336,7 +337,7 @@ private:
 };
 
 
-} // namespace seed
+END_GENERIC_NAMESPACE
 
 
 #include "src/CountPtr.inline.h"
