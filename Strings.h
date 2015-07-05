@@ -20,8 +20,8 @@ THE SOFTWARE.
 
 Author: Gaspard Petit
 *******************************************************************************/
-#ifndef __GENERIC_TEXT_STRINGMANIP_H__
-#define __GENERIC_TEXT_STRINGMANIP_H__
+#ifndef __GENERIC_TEXT_STRINGS_H__
+#define __GENERIC_TEXT_STRINGS_H__
 
 #include <iterator>
 #include <algorithm>
@@ -30,9 +30,10 @@ Author: Gaspard Petit
 #include <boost/algorithm/string.hpp>
 #include <cstdarg>
 #include <sstream>
-#include "Generic/Base/Types.h"
+#include <Enseed/Generic/Base/Base.h>
+#include <Enseed/Generic/Base/Types.h>
 
-namespace sd {
+BEGIN_GENERIC_NAMESPACE
 
 class Strings
 {
@@ -249,9 +250,13 @@ public:
 
 	static std::u32string toUTF32(const std::string &iUtf8)
 	{
-		typedef std::codecvt<char32_t,char,std::mbstate_t> facet_type;
-		std::wstring_convert<facet_type, char32_t> convert;
-		std::u32string utf32 = convert.from_bytes(iUtf8);
+		// https://social.msdn.microsoft.com/Forums/en-US/8f40dcd8-c67f-4eba-9134-a19b9178e481/vs-2015-rc-linker-stdcodecvt-error?forum=vcgeneral
+		// This gets around a bug in microsoft STL
+		//typedef std::codecvt<char32_t, char, std::mbstate_t> facet_type;
+		//std::wstring_convert<facet_type, char32_t> convert;
+		typedef std::codecvt<unsigned int, char, std::mbstate_t> facet_type;
+		std::wstring_convert<facet_type, unsigned int> convert;
+		std::u32string utf32 = reinterpret_cast<std::u32string&>(convert.from_bytes(iUtf8));
 		return utf32;
 	}
 
@@ -381,6 +386,6 @@ public:
 	}
 };
 
-} // ] namespace sd
+END_GENERIC_NAMESPACE
 
-#endif // ] __GENERIC_TEXT_STRINGMANIP_H__
+#endif // ] __GENERIC_TEXT_STRINGS_H__
