@@ -30,9 +30,10 @@ Author: Gaspard Petit
 #include <boost/algorithm/string.hpp>
 #include <cstdarg>
 #include <sstream>
-#include "Generic/Base/Types.h"
+#include "../Base/Base.h"
+#include "../Base/Types.h"
 
-namespace sd {
+BEGIN_GENERIC_NAMESPACE
 
 class Strings
 {
@@ -379,8 +380,24 @@ public:
 		}
 		return strm.str();
 	}
+
+	static bool beginsWith(const std::string &str, const std::string &pattern, bool caseSensitive = true)
+	{
+		if (caseSensitive)
+			return boost::starts_with(str, pattern);
+		else
+			return boost::istarts_with(str, pattern);
+	}
+
+	static bool endsWith(const std::string &str, const std::string &pattern, bool caseSensitive = true)
+	{
+		if (caseSensitive)
+			return boost::ends_with(str, pattern);
+		else
+			return boost::iends_with(str, pattern);
+	}
 };
 
-} // ] namespace sd
+END_GENERIC_NAMESPACE
 
 #endif // ] __GENERIC_TEXT_STRINGMANIP_H__
