@@ -23,6 +23,8 @@
 #ifndef __GENERIC_MEMORY_AUTOPTR_H__
 #define __GENERIC_MEMORY_AUTOPTR_H__
 
+#include "../Base/Base.h"
+
 /**
  *	\file 		AutoPtr.h
  *	\brief 		Automatic pointer class
@@ -33,7 +35,7 @@
 //	EXTERNAL DECLARATIONS
 //==============================================================================
 
-namespace sd {
+BEGIN_GENERIC_NAMESPACE
 
 /*!
  *	Automatic pointer class.  Use an AutoPtr to make sure the pointer is being
@@ -211,7 +213,7 @@ private:
 };
 
 
-} // namespace sd
+END_GENERIC_NAMESPACE
 
 
 #include "src/AutoPtr.inline.h"

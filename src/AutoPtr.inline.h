@@ -30,7 +30,7 @@
 #include "../Devel/Debug.h"
 #include <stddef.h>
 
-namespace sd {
+BEGIN_GENERIC_NAMESPACE
 
 //------------------------------------------------------------------------------
 //
@@ -265,7 +265,7 @@ bool operator != (const T *lhs, const AutoPtr<U, ALLOCATOR> &rhs)
 
 
 
-} // namespace sd
+END_GENERIC_NAMESPACE
 
 
 #endif // __GENERIC_MEMORY_AUTOPTR_INLINE_H__
