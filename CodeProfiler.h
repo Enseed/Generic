@@ -58,7 +58,7 @@ private:
 	CodeProfiler& operator =  (const CodeProfiler&);
 	
 public:
-	CodeProfiler(const char *name = __FUNCTION__);
+	CodeProfiler(const char *name);
 	~CodeProfiler();
 	
 	static void printReport();
