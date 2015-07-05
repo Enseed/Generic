@@ -24,7 +24,7 @@
 #define __GENERIC_BASE_TSTRING__
 
 #include <string>
-#include <Generic/Base/Types.h>
+#include <Enseed/Generic/Base/Types.h>
 
 
 static inline std::string StringFromWString(const std::wstring &aWideString)
