@@ -26,7 +26,7 @@ Author: Gaspard Petit
 //==============================================================================
 //	EXTERNAL DECLARATIONS
 //==============================================================================
-#include <Generic/Base/Base.h>
+#include <Enseed/Generic/Base/Base.h>
 
 #include <boost/function.hpp>
 #include <boost/bind.hpp>
