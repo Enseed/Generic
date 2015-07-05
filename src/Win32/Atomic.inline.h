@@ -27,7 +27,7 @@ Author: Gaspard Petit
 //	EXTERNAL DECLARATIONS
 //==============================================================================
 #include "../../Atomic.h"
-#include <Generic/Base/win/Windows.h>
+#include <Enseed/Generic/Base/win/Windows.h>
 
 BEGIN_GENERIC_NAMESPACE
 

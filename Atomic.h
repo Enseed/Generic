@@ -23,7 +23,7 @@ Author: Gaspard Petit
 #ifndef __SEED_ASYNC_ATOMIC_H__
 #define __SEED_ASYNC_ATOMIC_H__
 
-#include <Generic/Base/Base.h>
+#include <Enseed/Generic/Base/Base.h>
 
 //==============================================================================
 //	EXTERNAL DECLARATIONS
