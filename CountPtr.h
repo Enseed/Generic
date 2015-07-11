@@ -36,6 +36,7 @@
 #include <Enseed/Generic/Base/Base.h>
 #include <Enseed/Generic/Atomic/Atomic.h>
 #include <Enseed/Generic/Devel/Debug.h>
+#include <atomic>
 
 BEGIN_GENERIC_NAMESPACE
 
@@ -135,7 +136,7 @@ struct CountPtrRefStruct
 		// to 1 from 0, then the object is deleted.  If the previous value was 1, then
 		// we're safe.
 
-		if (_refCount.fetch_add(1) <= 1)
+		if (_refCount.fetch_add(1) <= 0)
 		{
 			_refCount.fetch_sub(1);
 			softRelease();
