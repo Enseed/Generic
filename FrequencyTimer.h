@@ -29,8 +29,8 @@
 #include "../Math/MovingAverage.h"
 #include "IntervalTimer.h"
 
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 
 //==============================================================================
@@ -78,7 +78,7 @@ public:
 	double frequency();
 };
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
 

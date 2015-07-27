@@ -31,8 +31,8 @@
 #include "IntervalTimer.h"
 #include <map>
 
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 
 //==============================================================================
@@ -70,7 +70,7 @@ private:
 
 #define PROFILE_THIS_FUNCTION CodeProfiler<Timer> _function_profile(__FUNCTION__)
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
 

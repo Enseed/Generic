@@ -28,8 +28,8 @@
 //==============================================================================
 #include "../FrequencyTimer.h"
 
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 
 //==============================================================================
@@ -88,7 +88,7 @@ double FrequencyTimer<TIMER, SIZE>::frequency()
 	return 1.0/mValue;
 }
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
 

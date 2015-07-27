@@ -29,8 +29,8 @@
 #include "../Base/Base.h"
 #include "../Math/Rational.h"
 
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 //==============================================================================
 //	CLASS Time
@@ -98,7 +98,7 @@ static inline Time operator * (const int &lhs, const Time &rhs)
 	return rhs * lhs;
 }
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
 

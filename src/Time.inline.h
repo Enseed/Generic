@@ -27,8 +27,8 @@
 #include "../../Math/Float.h"
 #include "../../Devel/Debug.h"
 
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 
 //==============================================================================
@@ -318,6 +318,6 @@ double Time::inSeconds() const
 	return static_cast<double>(mValue) / mRate.toDouble();
 }
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
