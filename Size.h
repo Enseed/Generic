@@ -28,8 +28,8 @@
 //==============================================================================
 #include "Point.h"
 
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 
 typedef Point2i Size2i;
@@ -40,7 +40,7 @@ typedef Point3i Size3i;
 typedef Point3f Size3f;
 typedef Point3d Size3d;
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
 
