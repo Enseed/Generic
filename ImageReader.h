@@ -29,7 +29,7 @@
 #include <vector>
 #include <string>
 #include <map>
-#include "../../ITL/Image/Image.h"
+#include <Enseed/ITL/Image/Image.h>
 
 #ifdef WIN32
 #ifdef GENERIC_EXPORTS
@@ -45,8 +45,8 @@
 //==============================================================================
 //	FORWARD DECLARATIONS
 //==============================================================================
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 class IImageFormatReader;
 
@@ -78,7 +78,7 @@ private:
 	std::multimap<std::string, IImageFormatReader*>			mLoaders;
 };
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
 

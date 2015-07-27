@@ -30,8 +30,8 @@
 #include "Pixel.declare.h"
 #include "../Base/Types.h"
 
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 //==============================================================================
 //	CLASS Image
@@ -95,7 +95,7 @@ private:
 	ImageImp* mImp;
 };
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
 

@@ -29,8 +29,8 @@
 #include "Constants.h"
 #include "../Base/Types.h"
 
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 
 //==============================================================================
@@ -756,7 +756,7 @@ protected:
 	/*const*/	_LPixel mPixel;
 };
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
 

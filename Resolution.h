@@ -31,8 +31,8 @@
 //==============================================================================
 //	FORWARD DECLARATIONS
 //==============================================================================
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 
 //==============================================================================
@@ -78,7 +78,7 @@ private:
 	int depth;
 };
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
 

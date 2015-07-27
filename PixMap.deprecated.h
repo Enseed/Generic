@@ -32,8 +32,8 @@
 #include "../Base/Types.h"
 #include "ColorProfiles.h"
 
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 
 //==============================================================================
@@ -509,7 +509,7 @@ private:
 	ColorProfile		mColorProfile;
 };
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
 

@@ -31,8 +31,8 @@
 //==============================================================================
 //	==> WILL BE USED BY C FILES - DO NOT NAMESPACE <==
 //==============================================================================
-//#ifdef GENERIC_LAYER_NAMESPACE
-//namespace GENERIC_LAYER_NAMESPACE {
+//#ifdef GENERIC_NAMESPACE
+//namespace GENERIC_NAMESPACE {
 //#endif
 
 enum
@@ -71,7 +71,7 @@ enum
 typedef int ColorProfile;
 
 
-//#ifdef GENERIC_LAYER_NAMESPACE
+//#ifdef GENERIC_NAMESPACE
 //}
 //#endif
 
