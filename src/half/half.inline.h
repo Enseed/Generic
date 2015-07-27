@@ -3,8 +3,8 @@
 
 #include "../../half.h"
 
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 
 //-------------------------------------------------------------------------
@@ -520,7 +520,7 @@ half::setBits (unsigned short bits)
     _h = bits;
 }
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
 

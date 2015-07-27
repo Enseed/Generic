@@ -28,8 +28,8 @@
 //==============================================================================
 #include "../MovingAverage.h"
 
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 
 //==============================================================================
@@ -91,7 +91,7 @@ _TYPE MovingAverage<_TYPE, _SIZE>::average()
 	return accum / mMovingQueue.size();
 }
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
 

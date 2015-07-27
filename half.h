@@ -88,8 +88,8 @@
 
 #include <iosfwd>
 
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 
 class half
@@ -262,7 +262,7 @@ void			printBits   (char  c[19], half  h);
 void			printBits   (char  c[35], float f);
 
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
 

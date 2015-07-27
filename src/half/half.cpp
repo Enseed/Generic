@@ -52,8 +52,8 @@
 
 using namespace std;
 
-#ifdef GENERIC_LAYER_NAMESPACE
-namespace GENERIC_LAYER_NAMESPACE {
+#ifdef GENERIC_NAMESPACE
+namespace GENERIC_NAMESPACE {
 #endif
 
 //-------------------------------------------------------------
@@ -323,6 +323,6 @@ printBits (char c[35], float f)
     c[34] = 0;
 }
 
-#ifdef GENERIC_LAYER_NAMESPACE
+#ifdef GENERIC_NAMESPACE
 }
 #endif
