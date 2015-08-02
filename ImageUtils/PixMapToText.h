@@ -27,7 +27,7 @@
 //	EXTERNAL DECLARATIONS
 //==============================================================================
 #include "../../Math/Rational.h"
-#include "Enseed/ITL/PixMap/PixMap.h"
+#include <ITL/PixMap/PixMap.h>
 #include <vector>
 #include <string>
 

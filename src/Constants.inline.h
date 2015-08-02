@@ -29,7 +29,7 @@
 #include "../../Geometry/Point4.h"
 #include "../../Math/Float.h"
 #include "../../Geometry/LUMatrixInverse.h"
-#include <Enseed/Generic/Base/Base.h>
+#include <Generic/Base/Base.h>
 
 namespace {
 

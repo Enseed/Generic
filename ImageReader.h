@@ -29,7 +29,7 @@
 #include <vector>
 #include <string>
 #include <map>
-#include <Enseed/ITL/Image/Image.h>
+#include <ITL/Image/Image.h>
 
 #ifdef WIN32
 #ifdef GENERIC_EXPORTS
