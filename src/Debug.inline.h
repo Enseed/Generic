@@ -40,7 +40,7 @@ Author: Gaspard Petit
 #endif
 
 #ifdef WIN32
-#include <Enseed/Generic/Base/win/Windows.h>
+#include <Generic/Base/win/Windows.h>
 #include <crtdbg.h>
 #include <cassert>
 #ifdef DEBUG_BREAK
