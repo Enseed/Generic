@@ -29,7 +29,8 @@
 #include "Types.h"
 #ifdef __cplusplus
 
-#define GENERIC_NAMESPACE			seed
+#define GENERIC_LAYER_NAMESPACE		seed
+#define GENERIC_NAMESPACE			GENERIC_LAYER_NAMESPACE
 #define USING_GENERIC_NAMESPACE		using namespace GENERIC_NAMESPACE;
 #define BEGIN_GENERIC_NAMESPACE		namespace GENERIC_NAMESPACE {
 #define END_GENERIC_NAMESPACE		}
