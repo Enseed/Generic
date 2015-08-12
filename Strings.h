@@ -30,8 +30,8 @@ Author: Gaspard Petit
 #include <boost/algorithm/string.hpp>
 #include <cstdarg>
 #include <sstream>
-#include <Enseed/Generic/Base/Base.h>
-#include <Enseed/Generic/Base/Types.h>
+#include <Generic/Base/Base.h>
+#include <Generic/Base/Types.h>
 
 BEGIN_GENERIC_NAMESPACE
 
