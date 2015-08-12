@@ -33,9 +33,9 @@
 //==============================================================================
 //	EXTERNAL DECLARATIONS
 //==============================================================================
-#include <Enseed/Generic/Base/Base.h>
-#include <Enseed/Generic/Atomic/Atomic.h>
-#include <Enseed/Generic/Devel/Debug.h>
+#include <Generic/Base/Base.h>
+#include <Generic/Atomic/Atomic.h>
+#include <Generic/Devel/Debug.h>
 #include <atomic>
 
 BEGIN_GENERIC_NAMESPACE
